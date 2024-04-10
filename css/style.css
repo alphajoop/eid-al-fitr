@@ -1,0 +1,89 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sarabun", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #021F59;
+}
+
+.container {
+  perspective: 1000px;
+}
+
+.card {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  animation: rotateBackAndForth 5s infinite alternate;
+}
+
+.card:hover {
+  transform: rotateY(20deg) rotateX(10deg);
+}
+
+@keyframes rotateBackAndForth {
+  0% {
+    transform: rotateY(20deg) rotateX(10deg);
+  }
+
+  50% {
+    transform: rotateY(-20deg) rotateX(-10deg);
+  }
+
+  100% {
+    transform: rotateY(20deg) rotateX(10deg);
+  }
+}
+
+.mosque {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.message {
+  color: #000;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+p {
+  color: #777;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #F2AB91;
+}
+
+@media only screen and (min-width: 768px) {
+  .card {
+    max-width: 600px;
+    min-height: 300px;
+  }
+
+  .mosque {
+    max-width: 70%;
+  }
+}
