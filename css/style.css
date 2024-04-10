@@ -24,7 +24,7 @@ body {
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(243, 240, 240, 0.35) 0px 5px 15px;
   transform-style: preserve-3d;
   transition: transform 1s;
   animation: rotateBackAndForth 5s infinite alternate;
